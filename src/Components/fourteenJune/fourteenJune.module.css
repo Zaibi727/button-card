@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif !important;
+}
+.cardContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calcucardWrapper{
+    margin: 0 auto;
+    width: 400px;
+    height: 300px;
+}
+.statement{
+    font-weight: 550;
+    font-size: 20px;
+}
+.calc{
+    margin-bottom: -2px;
+}
+.calcucard{
+    width: 400px;
+    height: 300px;
+    margin: 20px auto;
+}
+.calcuHeader{
+    background-color:#2fc772;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40px;
+}
+.calcuHeader p{
+    font-size: 14px;
+}
+.cardBottom{
+   background-color: white;
+}
+.cardBottomDiv1{
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid lightcyan;
+    padding: 10px 0px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.cardBottomDiv2{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 0px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.input{
+    border: 1px solid white;
+    background-color: transparent;
+    padding: 4px 10px;
+    text-align: center;
+    color: white;
+    width: 150px;
+}
+::placeholder{
+    color: lightcyan;
+}
+.pkr{
+    border: 1px solid white ;
+    padding: 4px 5px 5px 5px;
+    font-size: 13px;
+    color: white;
+}
+.input:focus{
+    outline: none;
+}
