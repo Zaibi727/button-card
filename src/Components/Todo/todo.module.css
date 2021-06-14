@@ -1,0 +1,33 @@
+.container{
+    padding: 20px;
+   
+}
+.data{
+    width: 70%;
+    margin: 0 auto;
+}
+.datawrapper{
+    display: flex;
+    justify-content: center;
+}
+.div1{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.div1 p{
+    margin-right: 30px;
+}
+.input{
+    margin-right: 30px;
+    padding: 7px 30px;
+}
+.addbtn{
+    padding: 7px;
+    background-color: rgb(58, 58, 245);
+    color: white;
+    font-weight: 600;
+    border: none;
+    
+}
