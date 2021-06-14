@@ -5,12 +5,7 @@ import styles from './fourteenJune.module.css';
 
 export default function FourTeenJuneContainer() {
     return (
-        <div className={styles.cardContainer}  style={{
-            backgroundImage: "url('/images/backofcalcu.svg')",
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-            backgroundColor: '#ebfdfd'
-        }}>          
+        <div className={styles.cardContainer}>          
            <CalcuCard/>
         </div>
     )
