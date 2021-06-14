@@ -13,23 +13,20 @@
     background-color: #edfaf2;
 }
 .calcucardWrapper{
-    margin: auto;
-    width: 50%;
-    height: 50%;
-    padding: 20px;
-   
+  width: 100%;
+  padding: 50px;
 }
 .statement{
     font-weight: regular;
-    font-size: 25px;
+    font-size: 18px;
 }
 .calc{
     margin-bottom: -2px;
 }
 .calcucard{
-    width: 500px;
-    height: 300px;
-    margin: 30px auto;
+    width: 960px;
+    max-width: 100%;
+    margin: 20px auto;
 }
 .calcuHeader{
     background-color:#2fc772;
@@ -44,20 +41,23 @@
     line-height: 30px;
 }
 .cardBottom{
-   background-color: white;
-   text-align: left
+   background-color: rgb(255, 255, 255);
+   text-align: left;
 }
 .cardBottomDiv1{
     display: flex;
     justify-content: space-evenly;
-    border-bottom: 1px solid rgb(233, 232, 232);
-    padding: 25px 0px;  
+    border-bottom: 1px solid rgb(233, 232, 232); 
+    height: 60px;
+    align-items: center;
+    text-align: left;
 }
 .cardBottomDiv2{
     display: flex;
     justify-content: space-evenly;
-    padding: 25px 0px;
     text-align: left;
+    height: 60px;
+    align-items: center;
 }
 .label{
     font-weight: 550;
@@ -70,156 +70,167 @@
 .input{
     border: 1px solid white;
     background-color: transparent;
-    padding: 7px 10px;
+    padding: 8px 10px;
     text-align: center;
     color: #deeee5;
-    width: 150px;
+    width: 200px;
 }
 ::placeholder{
     color: #c9f3dc;
+    font-size: 18px;
 }
 .pkr{
     border-top: 1px solid white;
     border-right:  1px solid white;
     border-bottom: 1px solid white ;
-    padding: 7px 5px 7px 5px;
+    padding: 8px 5px 8px 5px;
     font-size: 13px;
     color: white;
 }
-.input:focus{
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
     outline: none;
 }
 
 @media only screen and (max-width: 768px){
-    .calcucard{
-        width: 400px;
-        height: 300px;
-        margin: 20px auto;
-    }
-    .cardContainer{
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
     .calcucardWrapper{
-        margin: auto;
-        width: 70%;
-        height: 50%;
-        height: 100%;
-       
+      width: 100%;
+      padding: 20px;
     }
+
 }
-@media only screen and (max-width: 600px){
-    .calcucard{
-        width: 400px;
-        height: 300px;
-        margin: 20px auto;
-    }
-    .cardContainer{
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+
+@media only screen and (max-width: 500px){
     .calcucardWrapper{
-        margin: auto;
-        width: 100%;
-        height: 50%;
-        height: 100%;
-       
+      padding: 10px;
     }
-    .calcuHeader p{
-        font-size: 14px;
-        line-height: 20px;
+    .calc{
+        margin-bottom: -2px;
     }
-}
-@media only screen and (max-width: 450px){
     .calcucard{
-        width: 300px;
-        height: 300px;
+        max-width: 100%;
         margin: 10px auto;
     }
-    .cardContainer{
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .calcucardWrapper{
-        margin: auto;
-        width: 100%;
-        height: 50%;
-        height: 100%;  
-    }
     .calcuHeader p{
-        font-size: 14px;
+        font-size: 18px;
         line-height: 20px;
     }
+  
     .input{
-        border: 1px solid #c9f3dc;
+        border: 1px solid white;
         background-color: transparent;
-        padding: 4px 10px;
+        padding: 8px 10px;
         text-align: center;
         color: #deeee5;
-        width: 100px;
+        width: 150px;
     }
     ::placeholder{
         color: #c9f3dc;
+        font-size: 18px;
     }
     .pkr{
         border-top: 1px solid white;
         border-right:  1px solid white;
         border-bottom: 1px solid white ;
-        padding: 5px 5px 4px 5px;
-        font-size: 12px;
+        padding: 8px 5px 8px 5px;
+        font-size: 13px;
         color: white;
+    }
+    input:focus,
+    select:focus,
+    textarea:focus,
+    button:focus {
+        outline: none;
     }
 }
 
-@media only screen and (max-width: 320px){
+@media only screen and (max-width: 400px){
+    .calcucardWrapper{
+      padding: 10px;
+    }
+    .calc{
+        margin-bottom: -2px;
+    }
     .calcucard{
-        width: 280px;
-        height: 300px;
+        max-width: 100%;
         margin: 10px auto;
     }
-    .cardContainer{
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .calcuHeader p{
+        font-size: 18px;
+        line-height: 20px;
     }
-    .calcucardWrapper{
-        margin: auto;
-        width: 100%;
-        height: 50%;
-        height: 100%;  
-    }
+  
     .input{
-        border: 1px solid #c9f3dc;
+        border: 1px solid white;
         background-color: transparent;
-        padding: 4px 10px;
+        padding: 8px 10px;
         text-align: center;
         color: #deeee5;
-        max-width: 100px;
+        width: 120px;
     }
     ::placeholder{
         color: #c9f3dc;
+        font-size: 16px;
     }
     .pkr{
         border-top: 1px solid white;
         border-right:  1px solid white;
         border-bottom: 1px solid white ;
-        padding: 5px 5px 4px 5px;
-        font-size: 12px;
+        padding: 8px 5px 8px 5px;
+        font-size: 13px;
         color: white;
+    }
+    input:focus,
+    select:focus,
+    textarea:focus,
+    button:focus {
+        outline: none;
+    }
+}
+
+@media only screen and (max-width: 350px){
+    .calcucardWrapper{
+      padding: 10px;
+    }
+    .calc{
+        margin-bottom: -2px;
+    }
+    .calcucard{
+        max-width: 100%;
+        margin: 10px auto;
     }
     .calcuHeader p{
         font-size: 14px;
         line-height: 20px;
+    }
+  
+    .input{
+        border: 1px solid white;
+        background-color: transparent;
+        padding: 8px 5px;
+        text-align: center;
+        color: #deeee5;
+        width: 80px;
+        font-size: 13px;
+    }
+    ::placeholder{
+        color: #c9f3dc;
+        font-size: 10px;
+    }
+    .pkr{
+        border-top: 1px solid white;
+        border-right:  1px solid white;
+        border-bottom: 1px solid white ;
+        padding: 8px 5px 8px 5px;
+        font-size: 13px;
+        color: white;
+    }
+    input:focus,
+    select:focus,
+    textarea:focus,
+    button:focus {
+        outline: none;
     }
 }
