@@ -132,6 +132,10 @@
         height: 100%;
        
     }
+    .calcuHeader p{
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
 @media only screen and (max-width: 450px){
     .calcucard{
@@ -151,6 +155,10 @@
         width: 100%;
         height: 50%;
         height: 100%;  
+    }
+    .calcuHeader p{
+        font-size: 14px;
+        line-height: 20px;
     }
     .input{
         border: 1px solid #c9f3dc;
