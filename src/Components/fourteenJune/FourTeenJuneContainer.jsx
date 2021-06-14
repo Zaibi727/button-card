@@ -9,6 +9,7 @@ export default function FourTeenJuneContainer() {
             backgroundImage: "url('/images/backofcalcu.svg')",
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
+            backgroundColor: '#ebfdfd'
         }}>          
            <CalcuCard/>
         </div>
