@@ -18,7 +18,7 @@
 }
 .statement{
     font-weight: regular;
-    font-size: 22px;
+    font-size: 25px;
 }
 .calc{
     margin-bottom: -2px;
@@ -37,7 +37,7 @@
     height: 60px;
 }
 .calcuHeader p{
-    font-size: 22px;
+    font-size: 25px;
     line-height: 30px;
 }
 .cardBottom{
