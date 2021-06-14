@@ -21,7 +21,7 @@
 }
 .statement{
     font-weight: regular;
-    font-size: 18px;
+    font-size: 25px;
 }
 .calc{
     margin-bottom: -2px;
@@ -29,7 +29,7 @@
 .calcucard{
     width: 500px;
     height: 300px;
-    margin: 20px auto;
+    margin: 30px auto;
 }
 .calcuHeader{
     background-color:#2fc772;
@@ -62,11 +62,11 @@
 }
 .label{
     font-weight: 550;
-    font-size: 15px;  
+    font-size: 16px;  
 }
 .data{
     font-weight: 550;
-    font-size: 13px;
+    font-size: 14px;
 }
 .input{
     border: 1px solid white;
