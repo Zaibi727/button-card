@@ -6,7 +6,6 @@ import styles from './todo.module.css';
 
 function TodoList() {
   const [todos, setTodos] = useState([]);
-  const [count, setCount] = useState(0);
 
   const addTodo = todo => {
     if (!todo.text || /^\s*$/.test(todo.text)) {
@@ -19,12 +18,12 @@ function TodoList() {
     console.log(...todos);
   };
 
-  const updateTodo = (todoId, newValue) => {
-    if (!newValue.text || /^\s*$/.test(newValue.text)) {
+  const updateTodo = (todoId, newTodo) => {
+    if (!newTodo.text || /^\s*$/.test(newTodo.text)) {
       return;
     }
 
-    setTodos(prev => prev.map(item => (item.id === todoId ? newValue : item)));
+    setTodos(prev => prev.map(item => (item.id === todoId ? newTodo : item)));
   };
 
   const removeTodo = id => {
@@ -43,15 +42,15 @@ function TodoList() {
     setTodos(updatedTodos);
   };
 
-  const handleIncrement = () => {
-    setCount(count + 1)
+const handleIncrement = (id) => {
+  setTodos(prev => prev.map(todo => todo.id === id ? { ...todo, count: todo.count + 1 } : todo))
 }
 
-const handleDecrement = () => {
-    setCount(count - 1)
+const handleDecrement = (id) => {
+  setTodos(prev => prev.map(todo => todo.id === id ? { ...todo, count: todo.count - 1 } : todo))
 }
-const handleReset = () => {
-    setCount(count === 0);
+const handleReset = (id) => {
+  
 }
 
   return (
@@ -71,7 +70,6 @@ const handleReset = () => {
           completeTodo={completeTodo}
          removeTodo={removeTodo}
          updateTodo={updateTodo}
-         count={count}
          handleIncrement={handleIncrement}
          handleDecrement={handleDecrement}
       />
