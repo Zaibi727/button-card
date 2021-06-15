@@ -49,9 +49,7 @@ const handleIncrement = (id) => {
 const handleDecrement = (id) => {
   setTodos(prev => prev.map(todo => todo.id === id ? { ...todo, count: todo.count - 1 } : todo))
 }
-const handleReset = (id) => {
-  
-}
+
 
   return (
     <div className={styles.container}>
