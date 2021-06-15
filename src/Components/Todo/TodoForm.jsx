@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './todo.module.css';
 
 
 function TodoForm(props) {
-  const [input, setInput] = useState('');
+    const [input, setInput] = useState(props.edit ? props.edit.value : '');
 
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    inputRef.current.focus();
+  });
 
   const handleChange = e => {
     setInput(e.target.value);
@@ -26,11 +31,12 @@ function TodoForm(props) {
             {props.edit ? (
                 <>
                 <input
-                    placeholder='Task Name'
+                    placeholder='Update your Task'
                     value={input}
                      onChange={handleChange}
                       name='text'
                        className={styles.input}
+                       ref={inputRef}
                   />
                    <button className={styles.savebtn} onClick={handleSubmit}>
                      save
@@ -44,6 +50,7 @@ function TodoForm(props) {
                      onChange={handleChange}
                       name='text'
                        className={styles.input}
+                       ref={inputRef}
                   />
                    <button className={styles.addbtn} onClick={handleSubmit}>
                      Add Task
