@@ -31,7 +31,7 @@ function TodoForm(props) {
                       name='text'
                        className={styles.input}
                   />
-                   <button className={styles.addbtn} onClick={handleSubmit}>
+                   <button className={styles.savebtn} onClick={handleSubmit}>
                      save
                    </button>
                 </>

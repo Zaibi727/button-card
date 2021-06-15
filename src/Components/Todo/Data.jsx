@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import styles from './todo.module.css';
 import TodoForm  from './TodoForm';
 
-export default function Data({todos, completeTodo, removeTodo, updateTodo}) {
+export default function Data({todos, removeTodo, updateTodo,  handleIncrement, handleDecrement, count}) {
     const [edit, setEdit] = useState({
         id: null,
         value: ''
@@ -24,18 +24,18 @@ export default function Data({todos, completeTodo, removeTodo, updateTodo}) {
     return todos.map((todo, index) => (
         <div key={index} className={styles.datawrapper}>
            <div>
-               <button>+</button>
-               <button>-</button>
+               <button className={styles.increment} onClick={() => handleIncrement()}>+</button>
+               <button className={styles.decrement} onClick={() => handleDecrement()}>-</button>
             </div>
-            <div>
-                person counter
+            <div className={styles.personCounter}>
+                <p style={{backgroundColor: count ? '#007bff' : 'yellow', color: count ? 'white' : 'black'}}>Person <span>{count === 0 ? "Zero" : count}</span></p>
             </div>
           <div key={todo.id}>
             {todo.text}
           </div>
           <div>
-             <button onClick={() => setEdit({ id: todo.id, value: todo.text })}>edit</button>   
-             <button  onClick={() => removeTodo(todo.id)}>Delete</button>
+             <button className={styles.edit} onClick={() => setEdit({ id: todo.id, value: todo.text })}>edit</button>   
+             <button className={styles.delete}  onClick={() => removeTodo(todo.id)}>Delete</button>
           </div>
         </div>
       ));

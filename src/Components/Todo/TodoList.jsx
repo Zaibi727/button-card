@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import TodoForm from './TodoForm';
 import Data from './Data';
+import DateTime from './DateTime';
 import styles from './todo.module.css';
 
 function TodoList() {
   const [todos, setTodos] = useState([]);
+  const [count, setCount] = useState(0);
 
   const addTodo = todo => {
     if (!todo.text || /^\s*$/.test(todo.text)) {
@@ -41,13 +43,27 @@ function TodoList() {
     setTodos(updatedTodos);
   };
 
- 
+  const handleIncrement = () => {
+    setCount(count + 1)
+}
+
+const handleDecrement = () => {
+    setCount(count - 1)
+}
+const handleReset = () => {
+    setCount(count === 0);
+}
 
   return (
     <div className={styles.container}>
       <div className={styles.div1}>
           <p>Enter Task</p>
-         <TodoForm onSubmit={addTodo} />
+             <TodoForm onSubmit={addTodo} 
+            />
+            <button className={styles.resetbtn} onClick={handleReset}>Reset Number of Persons</button>
+            <div>
+               <DateTime />
+            </div>
       </div>
       <div className={styles.data}>
       <Data 
@@ -55,6 +71,9 @@ function TodoList() {
           completeTodo={completeTodo}
          removeTodo={removeTodo}
          updateTodo={updateTodo}
+         count={count}
+         handleIncrement={handleIncrement}
+         handleDecrement={handleDecrement}
       />
       </div>
     </div>
