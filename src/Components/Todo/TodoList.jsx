@@ -50,6 +50,9 @@ const handleDecrement = (id) => {
   setTodos(prev => prev.map(todo => todo.id === id ? { ...todo, count: todo.count - 1 } : todo))
 }
 
+const handleReset = (id) => {
+  setTodos(prev => prev.map(todo => todo.id === id ? { ...todo, count: todo.count === todo } : 0))
+}
 
   return (
     <div className={styles.container}>
