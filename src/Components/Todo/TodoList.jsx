@@ -50,8 +50,13 @@ const handleDecrement = (id) => {
   setTodos(prev => prev.map(todo => todo.id === id ? { ...todo, count: todo.count - 1 } : todo))
 }
 
-const handleReset = (id) => {
-  setTodos(prev => prev.map(todo => todo.id === id ? { ...todo, count: todo.count === todo } : 0))
+const handleReset = () => {
+  let myTodo = [...todos];
+  for(let i = 0; i < myTodo.length; i++){
+      const todo = myTodo[i];
+      todo.count = 0;
+  }
+  setTodos([...myTodo]);
 }
 
   return (
